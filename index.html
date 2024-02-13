@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HTML !-->
+    <div id="y">
+ <center> <div class="tenor-gif-embed" id="im" data-postid="20369340" data-share-method="host" data-aspect-ratio="1.14695" data-width="50%" >Milk And Mocha Hugs GIF</a>from Milk And Mocha GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <p><div id="c" width="10" height="20"></div></p>
+<center><input type="button" id="a" value="Tak">
+<input type="button"  id="b" value="No"></center> </div>
+
+<script>
+    const b1 = document.getElementById('a');
+    const b2= document.getElementById("b");
+    const ima= document.getElementById("im");
+    const c = document.getElementById("c");
+    const y = document.getElementById("y");
+    b1.addEventListener('click', updatea)
+    
+    b2.addEventListener("click", updateb);
+
+     
+    function updatea(){
+        b1.remove();
+        b2.remove();
+        c.style.height = 300 + "px";
+        ima.remove();
+        const el = document.createElement("div");
+        let counter = 0;
+        el.classList.add("element");
+        el.style.background = `hsl(${Math.random()*360}, 90%, 70%)`;
+        el.style.color = "#333";
+        y.innerHTML = '<center><iframe src="https://giphy.com/embed/CCgFT3eoyTfRpLpro9" width="800" height="800" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-cats-kitten-hugs-more-than-muffins-CCgFT3eoyTfRpLpro9"></a></p></center>';
+        
+    }
+    function updateb(){
+        if(b1.value==="Tak")
+        {
+            b1.value = "oczywiście";
+            var akt = window.getComputedStyle(a).width;
+         var akt2 = window.getComputedStyle(a).height;
+            var nowyr  = parseInt(akt)*3;
+            var nowyr2 = parseInt(akt2)*2;
+            b1.style.width = nowyr + "px";
+            b1.style.height = nowyr2+"px";
+            
+          
+         b1.style.fontSize = ftn +"px";
+          var imh = window.getComputedStyle(im).height
+          var imw = window.getComputedStyle(im).width
+          var nh = parseInt(imh)/2;
+          var nw = parseInt(imw)/2;
+          ima.style.width = nw + "px";
+        }
+        else if(b1.value==="oczywiście")
+        {
+            b1.value="No kurwa Jasne ze tak";
+            var ft = window.getComputedStyle(a).fontSize;
+            var ftn = parseInt(ft)*3;
+            b1.style.fontSize = ftn +"px";
+            var akt = window.getComputedStyle(a).width;
+            var akt2 = window.getComputedStyle(a).height;
+            var nowyr  = parseInt(akt)*5;
+            var nowyr2 = parseInt(akt2)*2;
+           
+            b1.style.width = nowyr + "px";
+            b1.style.height = nowyr2+"px";
+        }
+        else if(b1.value==="No kurwa Jasne ze tak"){
+            b1.value="Ostatecznie"; 
+            var akt = window.getComputedStyle(a).width;
+            var akt2 = window.getComputedStyle(a).height;
+            var nowyr  = parseInt(akt)*2;
+            var nowyr2 = parseInt(akt2)*2;
+            b1.style.width = nowyr + "px";
+            b1.style.height = nowyr2+"px";
+        }
+        else if(b1.value==="Ostatecznie"){
+       b1.value="Kocham cię bardziej niż ty"; 
+       var akt = window.getComputedStyle(a).width;
+       var akt2 = window.getComputedStyle(a).height;
+       var nowyr  = parseInt(akt)*2;
+       var nowyr2 = parseInt(akt2)*2*2;
+       b1.style.width = nowyr + "px";
+       b1.style.height = nowyr2+"px";
+       ima.remove();
+       b2.remove();
+            
+   }
+    }
+</script>
+</body>
+</html>
